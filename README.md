@@ -48,13 +48,11 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **[Create Posts and Comments ]**
-
-
+- **[A data model using an ERD diagram]**
+  **[Methods for updating models]**
+  **[Database for managing tables]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -83,7 +81,7 @@ https://github.com/ridabensalem/recipe-app.git```
 
 Install this project with:
 
-` cd School-library
+` cd recipe-app
   - Run gem install after cloning the repo
 
 ### Run Tests
@@ -106,12 +104,19 @@ rpec spec 'test_spec.rb'
 - Twitter: [@coder_rida](https://twitter.com/coder_rida)
 - LinkedIn: [ridabesalem](https://linkedin.com/in/ridabensalem)
 
+👤 **Prince**
+
+- GitHub: [@prius2055](https://github.com/prius2055)
+- Twitter: [@prius2055](https://www.twitter.com/prius2055)
+- LinkedIn: [@prius2055](https://www.linkedin.com/in/princenwuke)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Add more methods to recipe  app ]**
+- [ ] **[Add UI ]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
