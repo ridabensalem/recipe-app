@@ -22,7 +22,7 @@ class FoodsController < ApplicationController
 
   # POST /foods or /foods.json
   def create
-    @user = User.find_by(id:params[:user_id])
+    @user = User.find_by(id: params[:user_id])
     @food = Food.new(food_params)
     @food.user_id = @user.id
 
