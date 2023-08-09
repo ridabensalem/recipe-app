@@ -1,18 +1,52 @@
 <p style="color: green"><%= notice %></p>
 <div class='authentication'>
-<%= link_to "Sign Up", new_user_registration_path, class: "sign_up_button" %>
-<%= link_to "Log In", new_user_session_path, class: "Login_button" %>
+<%# <%= link_to "Sign Up", new_user_registration_path, class: "sign_up_button" %> %>
+<%# <%= link_to "Log In", new_user_session_path, class: "Login_button" %> %>
 </div>
-<h1>Foods</h1>
 
+<div class='foods-table'>
+  <%= link_to "Add Food", new_user_food_path %>
 
-<div id="foods">
+   <table>
+ <tr>
+    <th>
+    Food
+    </th>
+
+    <th>
+    Measurement unit
+    </th>
+    <th>
+    Unit price
+    </th>
+     <th>
+    Actions
+    </th>
+  </tr>
+
   <% @foods.each do |food| %>
-    <%= render food %>
-    <p>
-      <%= link_to "Show this food", food %>
-    </p>
+   
+    <%# <%= link_to "Show this food", user_foods_path(food) %> %>
+
+  <tr>
+    <td>
+     <%= food.name %>
+    </td>
+
+    <td>
+    <%= food.measurementUnit %>
+    </td>
+    <td>
+    <%= food.price %>
+    </td>
+     <td>
+    <%= link_to "Delete", user_food_path(food.user_id,food.id), method: :Destroy %>
+    </td>
+  </tr>
+
+  
   <% end %>
+  </table>
+
 </div>
 
-<%= link_to "New food", new_food_path %>
