@@ -11,7 +11,7 @@
   border: 3px outset #000;
 }
 
-.foods-table{
+.foods-table {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,16 +33,11 @@ th {
   text-align: left;
 }
 
-
 td {
   padding: 8px;
   border-bottom: 1px solid #ddd;
 }
 
-
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
-
-
-
