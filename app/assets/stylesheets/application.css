@@ -10,3 +10,39 @@
   color: #000;
   border: 3px outset #000;
 }
+
+.foods-table{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 60%;
+  margin: 5px auto;
+  padding: 2px;
+}
+
+table {
+  min-width: 60%;
+  border-collapse: collapse;
+  margin: 5px auto;
+}
+
+th {
+  background-color: #777;
+  padding: 10px;
+  text-align: left;
+}
+
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+
