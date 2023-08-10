@@ -24,7 +24,7 @@
       <tr>
       
         <td><%= recipe.food.name %> (<%= recipe.food.quantity %>)</td>
-        <td><%= recipe.quantity %> <%= recipe.food.measurement_unit %></td>
+        <td><%= recipe.quantity %> <%= recipe.food.measurementUnit %></td>
         <td>$<%= recipe.food.price %></td>
         <td>$<%= recipe.food.price.to_i * (recipe.quantity - recipe.food.quantity) %></td>
       </tr>

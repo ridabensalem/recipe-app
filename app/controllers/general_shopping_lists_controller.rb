@@ -1,5 +1,5 @@
 class GeneralShoppingListsController < ApplicationController
-      def index
+  def index
     @recipes = current_user.recipes
     @all_recipe_foods = @recipes.map(&:recipe_foods)
 
