@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root "users#index"
+  resources:recipes
+  
   
   resources :users do
     resources :foods do
