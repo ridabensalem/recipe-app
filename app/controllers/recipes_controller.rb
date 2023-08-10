@@ -57,7 +57,7 @@ class RecipesController < ApplicationController
 
   def public_recipes
     @public = Recipe.where(public: true).includes([:user]).includes([:recipe_foods]).order('created_at DESC')
-end
+  end
 
   private
 
