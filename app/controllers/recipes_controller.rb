@@ -55,6 +55,10 @@ class RecipesController < ApplicationController
     end
   end
 
+  def public_recipes
+    @public = Recipe.where(public: true).includes([:user]).includes([:recipe_foods]).order('created_at DESC')
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
