@@ -6,7 +6,6 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all.includes(:user)
   end
 
-
   # GET /recipes/1 or /recipes/1.json
   def show; end
 

@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
@@ -15,7 +14,6 @@ RSpec.describe User, type: :model do
     expect(subject).to be_valid
   end
 
- 
   it 'is not valid without a email' do
     subject.email = nil
     expect(subject).to_not be_valid
@@ -25,8 +23,6 @@ RSpec.describe User, type: :model do
     subject.password = nil
     expect(subject).to_not be_valid
   end
-
-  
 
   it 'is not valid with a password less than 6 characters' do
     subject.password = '12345'
@@ -42,6 +38,4 @@ RSpec.describe User, type: :model do
     subject.password_confirmation = '123456'
     expect(subject).to_not be_valid
   end
-
- 
 end
