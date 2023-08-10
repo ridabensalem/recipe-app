@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources:recipes
 
   get '/public_recipes', to: 'recipes#public_recipes'
+  get '/general_shopping_list', to: 'general_shopping_list#index'
   
   resources :users do
     resources :foods do
