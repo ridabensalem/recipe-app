@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :foods
 
   get '/public_recipes', to: 'recipes#public_recipes'
-  get '/general_shopping_list', to: 'general_shopping_list#index'
+  get '/general_shopping_lists', to: 'general_shopping_lists#index'
   
   resources :users do
     resources :foods do

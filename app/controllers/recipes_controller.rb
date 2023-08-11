@@ -6,6 +6,10 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all.includes(:user)
   end
 
+  def public_recipes
+    @public = Recipe.where(public: true).includes(:recipe_foods)
+  end
+
   # GET /recipes/1 or /recipes/1.json
   def show; end
 

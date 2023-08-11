@@ -3,8 +3,8 @@
   <span>
     Amount of food items to buy:<%= @recipe_foods.length %>
   </span>
-  <>
-    Total value of food needed: $<%= @recipe_foods.map {|rep| rep.food.price * (rep.quantity - rep.food.quantity) }.sum %>
+  <span>
+    Total value of food needed: $ <%= @recipe_foods.map {|rep| rep.food.price * (rep.quantity - rep.food.quantity) }.sum %>
   </span>
 </p>
 <table>
