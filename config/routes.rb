@@ -1,19 +1,16 @@
-Rails.application.routes.draw do 
+Rails.application.routes.draw do
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations',
     passwords: 'users/passwords'
   }
+  root "foods#index"
+
  
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-
-  root "users#index"
-  resources:recipes
-  resources:foods
   
+  
+  resources :recipes
+  resources :foods
 
   get '/public_recipes', to: 'recipes#public_recipes'
   get '/general_shopping_list', to: 'general_shopping_list#index'

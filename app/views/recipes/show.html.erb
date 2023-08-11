@@ -1,10 +1,8 @@
-<p style="color: green"><%= notice %></p>
+<p class="notice-message"><%= notice %></p>
 
 <%= render @recipe %>
 
-<div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
-
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+<div class="recipe-details">
+  <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: "edit_links" %> |
+  <%= link_to "Back to recipes", recipes_path, class: "edit_links" %>
 </div>

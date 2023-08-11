@@ -1,11 +1,16 @@
 <p style="color: green"><%= notice %></p>
+<div class='navigation'>
+<%= link_to "Home", root_path %> 
+<%= link_to "Foods", foods_path %>
+<%= link_to "Recipes", recipes_path %>
+<%= link_to "Sign Up", new_user_registration_path, class: "sign_up_button" %>
+<%= link_to "Log In", new_user_session_path, class: "Login_button" %>
+</div>
 <div class='authentication'>
-<%# <%= link_to "Sign Up", new_user_registration_path, class: "sign_up_button" %> %>
-<%# <%= link_to "Log In", new_user_session_path, class: "Login_button" %> %>
 </div>
 
 <div class='foods-table'>
-  <%= link_to "Add Food", new_user_food_path %>
+<%= link_to "Add Food", new_user_food_path(current_user) %>
 
    <table>
  <tr>
@@ -26,8 +31,6 @@
 
   <% @foods.each do |food| %>
    
-    <%# <%= link_to "Show this food", user_foods_path(food) %> %>
-
   <tr>
     <td>
      <%= food.name %>
