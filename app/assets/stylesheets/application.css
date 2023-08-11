@@ -41,3 +41,16 @@ td {
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navigation a {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #000;
+  border: 3px outset #000;
+  text-align: center;
+}

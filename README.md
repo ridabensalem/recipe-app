@@ -98,13 +98,13 @@ rpec spec 'test_spec.rb'
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Author 1**
 
 - GitHub: [@ridabensalem](https://github.com/ridabnesalem)
 - Twitter: [@coder_rida](https://twitter.com/coder_rida)
 - LinkedIn: [ridabesalem](https://linkedin.com/in/ridabensalem)
 
-👤 **Prince**
+👤 **Author 2**
 
 - GitHub: [@prius2055](https://github.com/prius2055)
 - Twitter: [@prius2055](https://www.twitter.com/prius2055)
