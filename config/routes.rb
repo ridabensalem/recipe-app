@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   
   resources :foods, expect: [:update]
   resources :recipes, expect: [:update]
+  resources :recipe_foods, expect: [:update]
 
   get '/public_recipes', to: 'recipes#public_recipes'
 
@@ -23,7 +24,9 @@ Rails.application.routes.draw do
   resources :recipes do
     resources :recipe_foods
   end
-
+  resources :recipes do
+    resources :recipe_foods, only: [:new, :create, :edit, :update, :destroy]
+  end
   # get '/toggle_public_recipe', to: 'recipes#toggle_public_recipe'
   put '/recipes/:id/toggle_public_recipe', to: 'recipes#toggle_public_recipe', as: 'toggle_public_recipe'
 

@@ -12,8 +12,7 @@ class RecipesController < ApplicationController
   end
 
   # GET /recipes/1 or /recipes/1.json
-  def show; 
-  end
+  def show; end
 
   # GET /recipes/new
   def new
@@ -66,10 +65,6 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.toggle!(:public)
     redirect_to @recipe
-  end
-
-  def public_recipes
-    @public = Recipe.where(public: true).includes([:user]).includes([:recipe_foods]).order('created_at DESC')
   end
 
   private
