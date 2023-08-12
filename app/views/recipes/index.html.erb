@@ -1,14 +1,23 @@
-<p style="color: green"><%= notice %></p>
+<div >
+ <h1 class="text-center">Recipes</h1>
+  <%= button_to "Add new recipe", new_recipe_path, method: :get, class: "btn btn-warning mt-10 mb-10 text-end m-3 me-auto order-last" %>
+ 
 
-<h1>Recipes</h1>
+  
+  <% @recipes.each do |recipe|%>
+  <div class='recipe-card'>
+    <div class='recipe-card-body'>
+     
+      <h3><%= recipe.name %></h3>
 
-<div id="recipes">
-  <% @recipes.each do |recipe| %>
-    <%= render recipe %>
-    <p>
-      <%= link_to "Show this recipe", recipe %>
-    </p>
+      <div class='recipe-card-action'>
+        <%= button_to "Remove", recipe, method: :delete,  class: 'btn btn-warning m-2 text-end', data: { turbo: false }  %> 
+        <%= link_to "Show details", recipe_path(recipe.id), class: 'btn btn-warning ml-2' %>
+      </div>
+    </div>
+  
+    <p class="recipe-description"><%= recipe.description %><p>
+ 
+  </div>
   <% end %>
 </div>
-
-<%= link_to "New recipe", new_recipe_path %>

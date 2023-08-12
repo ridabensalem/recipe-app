@@ -1,14 +1,57 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Foods</h1>
-
-<div id="foods">
-  <% @foods.each do |food| %>
-    <%= render food %>
-    <p>
-      <%= link_to "Show this food", food %>
-    </p>
-  <% end %>
+<div class='navigation'>
+<%= link_to "Home", root_path %> 
+<%= link_to "Foods", foods_path %>
+<%= link_to "Recipes", recipes_path %>
+<%= link_to "General Shopping List", general_shopping_lists_path %>
+<%= link_to "Public Recipes", public_recipes_path %>
+<%= link_to "Sign Up", new_user_registration_path, class: "sign_up_button" %>
+<%= link_to "Log In", new_user_session_path, class: "Login_button" %>
+</div>
+<div class='authentication'>
 </div>
 
-<%= link_to "New food", new_food_path %>
+<div class='foods-table'>
+<%= link_to "Add Food", new_food_path(current_user) %>
+
+   <table>
+ <tr>
+    <th>
+    Food
+    </th>
+
+    <th>
+    Measurement unit
+    </th>
+    <th>
+    Unit price
+    </th>
+     <th>
+    Actions
+    </th>
+  </tr>
+
+  <% @foods.each do |food| %>
+   
+  <tr>
+    <td>
+     <%= food.name %>
+    </td>
+
+    <td>
+    <%= food.measurementUnit %>
+    </td>
+    <td>
+    <%= food.price %>
+    </td>
+     <td>
+    <%= button_to "Delete", food_path(food.id), method: :delete %>
+    </td>
+  </tr>
+
+  
+  <% end %>
+  </table>
+
+</div>
+

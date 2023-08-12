@@ -1,15 +1,318 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.authentication {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.authentication a {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: #000;
+  border: 3px outset #000;
+}
+
+.foods-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 60%;
+  margin: 5px auto;
+  padding: 2px;
+}
+
+table {
+  min-width: 60%;
+  border-collapse: collapse;
+  margin: 5px auto;
+}
+
+th {
+  background-color: #777;
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navigation a {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #000;
+  border: 3px outset #000;
+  text-align: center;
+}
+
+/* recipes index  */
+
+/* Styles for the container */
+.container.bg-dark.text-light.rounded-top.px-4.pb-2.mb-4 {
+  background-color: #293742; /* Dark blue */
+  color: #fff; /* White */
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Styles for the header */
+.container.d-flex.gap-5 h1 {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+/* Styles for the add new recipe button */
+.container.d-flex.gap-5 .ms-auto.m-1 {
+  margin-left: auto;
+  margin-top: 1rem;
+  text-align: right;
+}
+
+/* Styles for the welcome emoji */
+.container.d-flex.gap-5 h1 span {
+  font-size: 1.5rem;
+}
+
+/* Styles for the intro text */
+h6.m-3 {
+  margin: 1.5rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: #52657a; /* Darker blue */
+}
+
+/* Styles for recipe cards */
+.shadow-lg.p-3.mb-5.bg-body-tertiary.rounded.bg-danger.d-flex {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  background-color: #f8d7da; /* Light pink */
+  border-radius: 0.5rem;
+  display: flex;
+}
+
+/* Styles for recipe card content */
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles for recipe title */
+.card-title.text-decoration-none.m-3.text-dark {
+  margin: 0.625rem;
+  font-size: 1.25rem;
+  color: #1d1d1d; /* Dark gray */
+}
+
+/* Styles for action buttons */
+.d-flex.gap-3 h3 {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Styles for the description */
+.card-body.m-2.w-50 p.text-dark {
+  margin: 0.125rem;
+  font-size: 0.875rem;
+  color: #444; /* Gray */
+  overflow-wrap: break-word;
+}
+
+/* Button styles */
+.btn {
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.btn-warning {
+  background-color: #ffa500; /* Orange */
+  color: #fff;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #ff8c00; /* Darker orange on hover */
+}
+
+/* Styling for Recipe Show Page */
+.recipe-show-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.recipe-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.recipe-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.recipe-info-grp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.recipe-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.action-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #0056b3;
+}
+
+.recipe-foods-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.recipe-foods-table th,
+.recipe-foods-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.food-action-link {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.food-action-link:hover {
+  color: #0056b3;
+}
+
+.edit-button,
+.back-button {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.recipe-card {
+  border: 4px solid black;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.recipe-card-body {
+  width: 30%;
+}
+
+.recipe-card-action {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.recipe-card-action .btn {
+  margin-left: 5px;
+}
+
+.recipe-description {
+  text-align: left;
+}
+
+.toggle-label {
+  display: flex;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 34px;
+}
+
+/* .switch button {
+  opacity: 0;
+  width: 0;
+  height: 0;
+} */
+
+.switch p {
+  position: absolute;
+  top: -15px;
+  left: -60px;
+  right: 0;
+  bottom: 0;
+  padding: 1.5px;
+}
+
+.btn-public {
+  background-color: rgb(33, 243, 33);
+  width: 50px;
+  height: 20px;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  .recipe-details {
+    align-items: flex-start;
+  }
+
+  .recipe-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .action-button {
+    margin: 5px 0;
+  }
+}

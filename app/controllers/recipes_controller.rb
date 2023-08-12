@@ -1,9 +1,14 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: %i[show edit update destroy]
+  # load_and_authorize_resource
 
   # GET /recipes or /recipes.json
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.all.includes(:user)
+  end
+
+  def public_recipes
+    @public = Recipe.where(public: true).includes(:user, :recipe_foods).order('created_at DESC')
   end
 
   # GET /recipes/1 or /recipes/1.json
@@ -20,6 +25,7 @@ class RecipesController < ApplicationController
   # POST /recipes or /recipes.json
   def create
     @recipe = Recipe.new(recipe_params)
+    @recipe.user_id = current_user.id
 
     respond_to do |format|
       if @recipe.save
@@ -53,6 +59,12 @@ class RecipesController < ApplicationController
       format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def toggle_public_recipe
+    @recipe = Recipe.find(params[:id])
+    @recipe.toggle!(:public)
+    redirect_to @recipe
   end
 
   private
