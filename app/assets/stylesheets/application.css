@@ -269,27 +269,39 @@ h6.m-3 {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
+  width: 200px;
   height: 34px;
 }
 
-.switch button {
+/* .switch button {
   opacity: 0;
   width: 0;
   height: 0;
-}
+} */
 
 .switch p {
   position: absolute;
- 
-  top: 0;
-  left: -50px;
+  top: -15px;
+  left: -60px;
   right: 0;
-  bottom: -50px;
+  bottom: 0;
+  padding: 1.5px;
  
 }
 
-.slider {
+.btn-public {
+ background-color: rgb(33, 243, 33);
+width: 50px;
+height: 20px;
+
+
+
+ 
+}
+
+
+
+/* .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -299,9 +311,9 @@ h6.m-3 {
   background-color: #ccc;
   transition: 0.4s;
   border-radius: 34px;
-}
+} */
 
-.slider:before {
+/* .slider:before {
   position: absolute;
   content: "";
   height: 26px;
@@ -311,15 +323,15 @@ h6.m-3 {
   background-color: white;
   transition: 0.4s;
   border-radius: 50%;
-}
+} */
 
-button:checked + .slider {
+/* button:checked + .slider {
   background-color: #14bf11;
-}
+} */
 
-button:checked + .slider:before {
+/* button:checked + .slider:before {
   transform: translateX(26px);
-}
+} */
 
 .slider.round {
   border-radius: 34px;

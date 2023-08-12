@@ -7,10 +7,8 @@ Rails.application.routes.draw do
 
   root "foods#index"
   
-  resources :foods
-  resources :recipes
-
-  put '/toggle_public_recipe', to: 'recipes#toggle_public_recipe'
+  resources :foods, expect: [:update]
+  resources :recipes, expect: [:update]
 
   get '/public_recipes', to: 'recipes#public_recipes'
 
@@ -25,5 +23,8 @@ Rails.application.routes.draw do
   resources :recipes do
     resources :recipe_foods
   end
+
+  # get '/toggle_public_recipe', to: 'recipes#toggle_public_recipe'
+  put '/recipes/:id/toggle_public_recipe', to: 'recipes#toggle_public_recipe', as: 'toggle_public_recipe'
 
 end
