@@ -12,7 +12,7 @@
 </div>
 
 <div class='foods-table'>
-<%= link_to "Add Food", new_user_food_path(current_user) %>
+<%= link_to "Add Food", new_food_path(current_user) %>
 
    <table>
  <tr>
@@ -45,7 +45,7 @@
     <%= food.price %>
     </td>
      <td>
-    <%= link_to "Delete", user_food_path(food.user_id,food.id), method: :Destroy %>
+    <%= button_to "Delete", food_path(food.id), method: :delete %>
     </td>
   </tr>
 
