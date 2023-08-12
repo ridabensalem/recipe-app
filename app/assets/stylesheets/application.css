@@ -273,7 +273,7 @@ h6.m-3 {
   height: 34px;
 }
 
-.switch input {
+.switch button {
   opacity: 0;
   width: 0;
   height: 0;
@@ -313,11 +313,11 @@ h6.m-3 {
   border-radius: 50%;
 }
 
-input:checked + .slider {
+button:checked + .slider {
   background-color: #14bf11;
 }
 
-input:checked + .slider:before {
+button:checked + .slider:before {
   transform: translateX(26px);
 }
 

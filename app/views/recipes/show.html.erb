@@ -10,14 +10,16 @@
     <label class="switch">
     <% if @recipe.public  %>
     <p> Public </p>
-    <input type="checkbox" id="toggle-slider" checked >
+    <%= button_to("Make Private", class: "recipe-action-button") %>
      <% else %>
     <p> Private </p>
-    <input type="checkbox" id="toggle-slider" >
+     <%= button_to("Make Public", class: "recipe-action-button") %>
      <% end %>
 
      <span class="slider round"></span>
     </label>
+
+    <%# <%= button_to(@recipe.public ? "Public, Make Private" : "Make Public", class: "recipe-action-button") %> %>
 
   </div>
   <div class="recipe-actions">
