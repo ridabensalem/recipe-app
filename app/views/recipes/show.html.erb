@@ -1,19 +1,19 @@
 <div class="recipe-show-container">
   <h1 class="recipe-title"><%= @recipe.name %></h1>
   <div class="recipe-info">
-    <p><strong>Preparation Time:</strong> <%= @recipe.preparationTime %> minutes</p>
-    <label class="toggle-label">
-      <%= form_for @recipe, method: :patch, remote: true do |f| %>
-        <%= f.check_box :public, class: "toggle-input" %>
-        <span class="toggle-slider"></span>
-      <% end %>
-      <span class="toggle-text">Public</span>
-    </label>
+    <p><strong>Preparation Time:</strong> <%= @recipe.preparationTime %> minutes</p> <br>
+    <label class="form-check form-switch">
+  <%= form_for @recipe, method: :patch, remote: true do |f| %>
+   <span class="form-check-label">Public</span>
+    <%= f.check_box :public, class: "form-check-input" %>
+  <% end %>
+</label>
+
     <p><strong>Cooking Time:</strong> <%= @recipe.cookingTime %> minutes</p>
   </div>
   <div class="recipe-actions">
     <%= link_to "Generate Shopping List", general_shopping_lists_path, class: "action-button generate-button" %>
-    <%= link_to "Add Ingredient", class: "action-button add-ingredient-button" %>
+    <%= link_to "Add Ingredient", class: "action-button add-ingredient" %>
   </div>
   <table class="recipe-foods-table">
     <thead>
