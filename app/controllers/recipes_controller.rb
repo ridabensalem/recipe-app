@@ -62,6 +62,12 @@ class RecipesController < ApplicationController
     end
   end
 
+  def toggle_public_recipe
+    @recipe = Recipe.find(params[:id])
+    @recipe.toggle!(:public)
+    redirect_to @recipe
+  end
+
   def public_recipes
     @public = Recipe.where(public: true).includes([:user]).includes([:recipe_foods]).order('created_at DESC')
   end

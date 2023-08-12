@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   resources :foods
   resources :recipes
 
+  put '/toggle_public_recipe', to: 'recipes#toggle_public_recipe'
+
   get '/public_recipes', to: 'recipes#public_recipes'
+
   get '/general_shopping_lists', to: 'general_shopping_lists#index'
   
   resources :users

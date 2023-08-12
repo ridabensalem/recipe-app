@@ -10,10 +10,10 @@
     <label class="switch">
     <% if @recipe.public  %>
     <p> Public </p>
-    <%= button_to("Make Private", class: "recipe-action-button") %>
+    <%= button_to("Make Private", toggle_public_recipe_path(@recipe), method: :put, class: "recipe-action-button") %>
      <% else %>
     <p> Private </p>
-     <%= button_to("Make Public", class: "recipe-action-button") %>
+     <%= button_to("Make Public",  toggle_public_recipe_path(@recipe), method: :put, class: "recipe-action-button") %>
      <% end %>
 
      <span class="slider round"></span>
