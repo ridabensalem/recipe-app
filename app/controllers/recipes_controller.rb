@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: %i[show edit update destroy]
+  # load_and_authorize_resource
 
   # GET /recipes or /recipes.json
   def index
@@ -7,7 +8,7 @@ class RecipesController < ApplicationController
   end
 
   def public_recipes
-    @public = Recipe.where(public: true).includes(:recipe_foods)
+    @public = Recipe.where(public: true).includes(:user, :recipe_foods).order('created_at DESC')
   end
 
   # GET /recipes/1 or /recipes/1.json
@@ -60,8 +61,10 @@ class RecipesController < ApplicationController
     end
   end
 
-  def public_recipes
-    @public = Recipe.where(public: true).includes([:user]).includes([:recipe_foods]).order('created_at DESC')
+  def toggle_public_recipe
+    @recipe = Recipe.find(params[:id])
+    @recipe.toggle!(:public)
+    redirect_to @recipe
   end
 
   private

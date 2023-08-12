@@ -179,6 +179,13 @@ h6.m-3 {
   margin-bottom: 10px;
 }
 
+.recipe-info-grp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
 .recipe-actions {
   display: flex;
   justify-content: space-between;
@@ -227,6 +234,71 @@ h6.m-3 {
 .back-button {
   color: #007bff;
   text-decoration: none;
+}
+
+.recipe-card {
+  border: 4px solid black;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.recipe-card-body {
+  width: 30%;
+}
+
+.recipe-card-action {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.recipe-card-action .btn {
+  margin-left: 5px;
+}
+
+.recipe-description {
+  text-align: left;
+}
+
+.toggle-label {
+  display: flex;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 34px;
+}
+
+/* .switch button {
+  opacity: 0;
+  width: 0;
+  height: 0;
+} */
+
+.switch p {
+  position: absolute;
+  top: -15px;
+  left: -60px;
+  right: 0;
+  bottom: 0;
+  padding: 1.5px;
+}
+
+.btn-public {
+  background-color: rgb(33, 243, 33);
+  width: 50px;
+  height: 20px;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
 }
 
 /* Responsive styles */
