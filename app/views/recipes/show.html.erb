@@ -13,7 +13,7 @@
   </div>
   <div class="recipe-actions">
     <%= link_to "Generate Shopping List", general_shopping_lists_path, class: "action-button generate-button" %>
-    <%= link_to "Add Ingredient", class: "action-button add-ingredient" %>
+    <%= link_to "Add Ingredient",new_recipe_recipe_food_path(@recipe.id), class: "action-button add-ingredient" %>
   </div>
   <table class="recipe-foods-table">
     <thead>
