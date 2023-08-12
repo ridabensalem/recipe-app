@@ -1,10 +1,5 @@
-<p style="color: green"><%= notice %></p>
+<h1><%= @food.name%></h1>
 
-<%# <%= render @food %> %>
-
-<div>
-  <%# <%= link_to "Edit this food", edit_food_path(@food) %> | %>
-  <%# <%= link_to "Back to foods", foods_path %> %>
-
-  <%= button_to "Destroy this food", user_food_path(@food), method: :delete %>
-</div>
+<p>Measurement: <%= @food.measurement_unit %></p>
+<p>Price: <%= @food.price %></p>
+<p> Quantity: <%= @food.quantity %></p>

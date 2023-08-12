@@ -4,23 +4,23 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     passwords: 'users/passwords'
   }
-  root "foods#index"
 
- 
+  root "foods#index"
   
-  
-  resources :recipes
   resources :foods
+  resources :recipes
 
   get '/public_recipes', to: 'recipes#public_recipes'
   get '/general_shopping_lists', to: 'general_shopping_lists#index'
   
-  resources :users do
-    resources :foods do
-      resources :recipe_foods
-    end
-    resources :recipes do
-      resources :recipe_foods
-    end
+  resources :users
+
+  resources :foods do
+    resources :recipe_foods
   end
+
+  resources :recipes do
+    resources :recipe_foods
+  end
+
 end
